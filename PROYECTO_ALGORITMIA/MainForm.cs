@@ -20,7 +20,8 @@ namespace PROYECTO_ALGORITMIA
             InitializeComponent();
             entidadActual = "";
         }
-
+        
+        //Para que los botones sepan que entidad modificar
         private string EntidadActual()
         {
             if (rB_Cliente.Checked == true)
