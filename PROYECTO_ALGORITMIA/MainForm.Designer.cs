@@ -33,9 +33,11 @@
             this.rB_Venta = new System.Windows.Forms.RadioButton();
             this.rB_Prod = new System.Windows.Forms.RadioButton();
             this.rB_Cliente = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_Capturar = new System.Windows.Forms.Button();
+            this.btn_Modificar = new System.Windows.Forms.Button();
+            this.btn_Mostrar = new System.Windows.Forms.Button();
+            this.btn_Orden = new System.Windows.Forms.Button();
+            this.btn_AVL = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,44 +98,71 @@
             this.rB_Cliente.Text = "Cliente";
             this.rB_Cliente.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_Capturar
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(141, 33);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(238, 28);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Capturar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_Capturar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Capturar.Location = new System.Drawing.Point(141, 33);
+            this.btn_Capturar.Name = "btn_Capturar";
+            this.btn_Capturar.Size = new System.Drawing.Size(238, 28);
+            this.btn_Capturar.TabIndex = 1;
+            this.btn_Capturar.Text = "Capturar";
+            this.btn_Capturar.UseVisualStyleBackColor = true;
+            this.btn_Capturar.Click += new System.EventHandler(this.btn_Capturar_Click);
             // 
-            // button2
+            // btn_Modificar
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(141, 68);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(238, 28);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Modificar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_Modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Modificar.Location = new System.Drawing.Point(141, 68);
+            this.btn_Modificar.Name = "btn_Modificar";
+            this.btn_Modificar.Size = new System.Drawing.Size(238, 28);
+            this.btn_Modificar.TabIndex = 2;
+            this.btn_Modificar.Text = "Modificar";
+            this.btn_Modificar.UseVisualStyleBackColor = true;
+            this.btn_Modificar.Click += new System.EventHandler(this.btn_Modificar_Click);
             // 
-            // button3
+            // btn_Mostrar
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(141, 103);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(238, 28);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Mostrar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_Mostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Mostrar.Location = new System.Drawing.Point(141, 103);
+            this.btn_Mostrar.Name = "btn_Mostrar";
+            this.btn_Mostrar.Size = new System.Drawing.Size(238, 28);
+            this.btn_Mostrar.TabIndex = 3;
+            this.btn_Mostrar.Text = "Mostrar";
+            this.btn_Mostrar.UseVisualStyleBackColor = true;
+            this.btn_Mostrar.Click += new System.EventHandler(this.btn_Mostrar_Click);
+            // 
+            // btn_Orden
+            // 
+            this.btn_Orden.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Orden.Location = new System.Drawing.Point(386, 33);
+            this.btn_Orden.Name = "btn_Orden";
+            this.btn_Orden.Size = new System.Drawing.Size(92, 98);
+            this.btn_Orden.TabIndex = 4;
+            this.btn_Orden.Text = "Ordenar registros";
+            this.btn_Orden.UseVisualStyleBackColor = true;
+            this.btn_Orden.Click += new System.EventHandler(this.btn_Orden_Click);
+            // 
+            // btn_AVL
+            // 
+            this.btn_AVL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AVL.Location = new System.Drawing.Point(141, 138);
+            this.btn_AVL.Name = "btn_AVL";
+            this.btn_AVL.Size = new System.Drawing.Size(337, 28);
+            this.btn_AVL.TabIndex = 5;
+            this.btn_AVL.Text = "Buscar producto por grado de satisfacción";
+            this.btn_AVL.UseVisualStyleBackColor = true;
+            this.btn_AVL.Click += new System.EventHandler(this.btn_AVL_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(406, 158);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(506, 186);
+            this.Controls.Add(this.btn_AVL);
+            this.Controls.Add(this.btn_Orden);
+            this.Controls.Add(this.btn_Mostrar);
+            this.Controls.Add(this.btn_Modificar);
+            this.Controls.Add(this.btn_Capturar);
             this.Controls.Add(this.groupBox1);
             this.Name = "MainForm";
             this.Text = "Sistema Consultas";
@@ -151,9 +180,11 @@
         private System.Windows.Forms.RadioButton rB_Venta;
         private System.Windows.Forms.RadioButton rB_Prod;
         private System.Windows.Forms.RadioButton rB_Cliente;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_Capturar;
+        private System.Windows.Forms.Button btn_Modificar;
+        private System.Windows.Forms.Button btn_Mostrar;
+        private System.Windows.Forms.Button btn_Orden;
+        private System.Windows.Forms.Button btn_AVL;
     }
 }
 
